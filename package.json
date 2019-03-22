@@ -5,6 +5,10 @@
   "main": "lib/index.js",
   "author": "Giorgio Garasto <giorgio@garasto.it>",
   "license": "MIT",
+  "scripts": {
+    "build": "tsc -p .",
+    "prepublishOnly": "yarn build"
+  },
   "devDependencies": {
     "@types/node": "^11.11.4",
     "@types/redux-logger": "^3.0.7",
