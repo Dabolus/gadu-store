@@ -49,7 +49,7 @@ const getMiddlewares = (scope: 'main' | 'renderer'): Middleware[] => {
   ];
 };
 
-const replayAction = (scope: 'main' | 'renderer', store: Store<RootState>): Store<RootState> => {
+const replayAction = (scope: 'main' | 'renderer', store: Store<RootState>): void => {
   return scope === 'main' ? replayActionMain(store) : replayActionRenderer(store);
 };
 
@@ -62,8 +62,10 @@ export const configure = (
 
   const store = createStore(rootReducer, initialState, enhancer);
 
-  return replayAction(
+  replayAction(
     scope,
     module.hot ? enableReducerHotReload(store) : store,
   );
+
+  return store;
 };
