@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "The shared store between Google Assistant Desktop main and renderer processes.",
   "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
   "author": "Giorgio Garasto <giorgio@garasto.it>",
   "license": "MIT",
   "scripts": {

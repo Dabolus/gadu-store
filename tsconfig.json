@@ -2,11 +2,10 @@
   "compilerOptions": {
     "rootDir": "src",
     "outDir": "lib",
+    "declaration": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "strictNullChecks": false,
-    "allowJs": true,
-    "checkJs": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "esModuleInterop": true,
